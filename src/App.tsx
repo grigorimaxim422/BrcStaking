@@ -8,8 +8,8 @@ import WalletListModal from './components/modal/walletlistModal';
 import OnAuthHandler, { LoadingState } from './components/WalletProvider';
 import twitterIcon from "./assets/images/twitter.svg";
 import telegramIcon from "./assets/images/telegram.svg";
-import searchIcon from "./assets/images/searchIcon.svg";
-import closeIcon from "./assets/images/close.svg";
+import searchIcon from "./assets/images/searchIcon.png";
+import closeIcon from "./assets/images/close.png";
 import stakingCoinImg from "./assets/images/stakingCoinImage.png";
 import bCoinIcon from "./assets/images/bcoinIcon-t5wl58ob.png";
 
