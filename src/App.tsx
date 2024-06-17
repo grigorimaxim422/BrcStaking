@@ -313,8 +313,8 @@ function App() {
 						<div className=" flex flex-col gap-4">
 							<div className="poolsHeader">
 								<h2 className="poolsHeaderTitle"> All Pools</h2>
-								<div className="poolsCheckbox" onClick={() => setShowActive((status) => !status)}>
-									<input type="checkbox" className="checkbox" />
+								<div className="poolsCheckbox">
+									<input type="checkbox" className="checkbox" onChange={(e) =>setShowActive(e.target.checked)} />
 									<label className="poolsCheckboxLabel">
 										Show Only Active
 									</label>
