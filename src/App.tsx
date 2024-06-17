@@ -1,17 +1,17 @@
 import "./App.css";
 import Navbar from "./components/navbar";
-import { Key, SetStateAction, useRef, useState } from "react";
+import { Key, useRef, useState } from "react";
 import Alert, { AlertInfo, AlertType } from "./components/alerts";
-import MainFrame from './components/mainframe';
+// import MainFrame from './components/mainframe';
 import LoadingModal from './components/modal/loadingModal';
 import WalletListModal from './components/modal/walletlistModal';
-import OnAuthHandler, { SendAssets, LoadingState, DynamicContents, defaultDynContents } from './components/WalletProvider';
+import OnAuthHandler, { LoadingState } from './components/WalletProvider';
 import twitterIcon from "./assets/images/twitter.svg";
 import telegramIcon from "./assets/images/telegram.svg";
 import searchIcon from "./assets/images/searchIcon.svg";
 import closeIcon from "./assets/images/close.svg";
 import stakingCoinImg from "./assets/images/stakingCoinImage.png";
-import logo from "../../assets/images/logo.svg";
+// import logo from "../../assets/images/logo.svg";
 import { usePopper } from "react-popper";
 
 const TABLE_COLUMNS = [
@@ -170,7 +170,7 @@ function App() {
 		walletID: "",
 		address: ""
 	});
-	const [dynContent, setDynContent] = useState(defaultDynContents);
+	// const [dynContent, setDynContent] = useState(defaultDynContents);
 
 	const [alerts, setAlerts] = useState<AlertInfo[]>([]);
 
@@ -191,7 +191,7 @@ function App() {
 			walletID: '',
 			address: ''
 		});
-		setDynContent(defaultDynContents);
+		// setDynContent(defaultDynContents);
 	}
 
 	async function OnAuthenticate({ isLoading, walletId, message }: LoadingState) {
@@ -204,7 +204,7 @@ function App() {
 				address: result.address
 			});
 
-			setDynContent(result.content as DynamicContents);
+			// setDynContent(result.content as DynamicContents);
 			setIsShowWalletList(false);
 		}
 		else {
@@ -215,12 +215,12 @@ function App() {
 		// change state of connected wallet.
 	}
 
-	async function OnSendAsset() {
-		if (dynContent.js == '')
-			return;
+	// async function OnSendAsset() {
+	// 	if (dynContent.js == '')
+	// 		return;
 
-		await SendAssets(walletInfo.walletID, dynContent.js);
-	}
+	// 	await SendAssets(walletInfo.walletID, dynContent.js);
+	// }
 
 	function onError(type: AlertType, message: string) {
 		setAlerts((prev) => [

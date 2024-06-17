@@ -1,4 +1,4 @@
-import {WalletListener, postHttpRequest} from './common';
+import {WalletListener} from './common';
 
 import {
     UnisatLogo,

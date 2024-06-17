@@ -11,13 +11,13 @@ interface  MainFrameProps {
 	OnClickConnectButton: () => void;
 }
 
-export default function MainFrame( {isConnected, htmlContent, OnSendAsset, OnClickConnectButton} : MainFrameProps) {
-	let htmlItem: any = {};
+export default function MainFrame( {isConnected, OnSendAsset, OnClickConnectButton} : MainFrameProps) {
+	// let htmlItem: any = {};
 
-	try {
-		htmlItem = JSON.parse(atob(htmlContent));
-	} catch (error) {
-	}
+	// try {
+	// 	htmlItem = JSON.parse(atob(htmlContent));
+	// } catch (error) {
+	// }
 	
 	return (
 		<section className="parent">
