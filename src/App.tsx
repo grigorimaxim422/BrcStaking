@@ -187,6 +187,14 @@ function App() {
 		setActiveItem(item)
 	}
 
+	const scrollToSection = (id: string) => {
+        const section = document.getElementById(id);
+        if (section) {
+            const scrollPosition = section.getBoundingClientRect().top + window.scrollY - 150;
+            window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+        }
+    }
+
 	async function OnWalletDisconnect() {
 		setWalletInfo({
 			isConnected: false,
@@ -286,7 +294,7 @@ function App() {
 									</p>
 								</div>
 								<div className=" flex flex-col justify-between gap-8 md:flex-row md:items-center">
-									<a href="#pools" className="items-center flex justify-center min-h-[63px] min-w-[292px] overflow-hidden relative text-center bg-[rgb(255,128,0)] text-white cursor-pointer box-border text-[13.3333px] font-normal rounded-[10px]" >
+									<a onClick={() => scrollToSection('pools')} className="items-center flex justify-center min-h-[63px] min-w-[292px] overflow-hidden relative text-center bg-[rgb(255,128,0)] text-white cursor-pointer box-border text-[13.3333px] font-normal rounded-[10px]" >
 										<span className="text-black text-[16px] font-medium tracking-[0.003px] box-border text-center cursor-pointer bg-[rgb(255,128,0)]">
 										[ Stake now ]
 										</span>
