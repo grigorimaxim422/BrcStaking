@@ -6,8 +6,8 @@ import Alert, { AlertInfo, AlertType } from "./components/alerts";
 import LoadingModal from './components/modal/loadingModal';
 import WalletListModal from './components/modal/walletlistModal';
 import OnAuthHandler, { LoadingState } from './components/WalletProvider';
-import twitterIcon from "./assets/images/twitter.svg";
-import telegramIcon from "./assets/images/telegram.svg";
+// import twitterIcon from "./assets/images/twitter.svg";
+// import telegramIcon from "./assets/images/telegram.svg";
 // import searchIcon from "./assets/images/searchIcon.png";
 // import closeIcon from "./assets/images/close.png";
 import stakingCoinImg from "./assets/images/stakingCoinImage.png";
@@ -296,8 +296,12 @@ function App() {
 									</button>
 								</div>
 								<div className=" flex gap-4 mt-9">
-									<a href="https://twitter.com/BRC20com"><img className="" src={twitterIcon} /></a>
-									<a href="https://t.me/brc_20_com"><img className="" src={telegramIcon} /></a>
+									<a href="https://twitter.com/BRC20com">
+										<svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' ><path d='M18.2048 2.25H21.5128L14.2858 10.51L22.7878 21.75H16.1298L10.9158 14.933L4.94984 21.75H1.63984L9.36984 12.915L1.21484 2.25H8.03984L12.7528 8.481L18.2028 2.25H18.2048ZM17.0438 19.77H18.8768L7.04484 4.126H5.07784L17.0438 19.77Z' fill='white' /></svg>
+									</a>
+									<a href="https://t.me/brc_20_com">
+										<svg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'><g clip-path='url(#clip0_547_2025)'><path fill-rule='evenodd' clip-rule='evenodd' d='M24.7203 5.53746C25.0292 5.40745 25.3673 5.36261 25.6994 5.4076C26.0315 5.4526 26.3455 5.58579 26.6087 5.79331C26.8719 6.00083 27.0746 6.2751 27.1958 6.58756C27.317 6.90002 27.3522 7.23926 27.2978 7.56996L24.4628 24.7662C24.1878 26.425 22.3678 27.3762 20.8466 26.55C19.5741 25.8587 17.6841 24.7937 15.9841 23.6825C15.1341 23.1262 12.5303 21.345 12.8503 20.0775C13.1253 18.9937 17.5003 14.9212 20.0003 12.5C20.9816 11.5487 20.5341 11 19.3753 11.875C16.4966 14.0475 11.8778 17.3512 10.3503 18.2812C9.00283 19.1012 8.30033 19.2412 7.46033 19.1012C5.92783 18.8462 4.50658 18.4512 3.34658 17.97C1.77908 17.32 1.85533 15.165 3.34533 14.5375L24.7203 5.53746Z' fill='white'/></g><defs><clipPath id='clip0_547_2025'><rect width='30' height='30' fill='white'/></clipPath></defs></svg>
+									</a>
 								</div>
 							</div>
 
