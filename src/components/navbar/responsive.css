@@ -1,0 +1,55 @@
+@media screen and (max-width: 840px) {
+  .get-app {
+    display: flex;
+  }
+
+  nav .main-nav {
+    justify-content: space-between;
+  }
+
+  .nav-links,
+  .gift-wrapper-icon-parent,
+  .more-items {
+    display: none;
+  }
+
+  .small-menu {
+    display: flex;
+  }
+
+  aside.sidenav {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+
+@media screen and (max-width: 825px) {
+  /* nav .main-nav {
+    padding-bottom: 90px;
+  } */
+
+  form.search {
+    max-width: unset;
+    width: 100%;
+    position: absolute;
+    top: 64px;
+    padding: 0 16px;
+  }
+
+  form.search .fees {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .extra-links {
+    display: none;
+  }
+
+  .container-connect {
+    padding-bottom: 60px;
+  }
+  
+  
+}
+

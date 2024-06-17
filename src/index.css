@@ -1,0 +1,103 @@
+@import url(./assets/css/icons.css);
+@import url(./assets/css/element-icons.css);
+
+/* @font-face {
+  font-family: Proto Mono;
+  src: url(./assets/fonts/ProtoMono-Light.otf);
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap
+}
+
+@font-face {
+  font-family: Proto Mono;
+  src: url(./assets/fonts/ProtoMono-Regular.otf);
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap
+}
+
+@font-face {
+  font-family: Proto Mono;
+  src: url(./assets/fonts/ProtoMono-Bold.otf);
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap
+} */
+
+@font-face {
+  font-family: Roboto Mono;
+  src: url(./assets/fonts/roboto-mono-latin-300-normal.ttf) format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap
+}
+
+@font-face {
+  font-family: Roboto Mono;
+  src: url(./assets/fonts/roboto-mono-latin-400-normal.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap
+}
+
+@font-face {
+  font-family: Roboto Mono;
+  src: url(./assets/fonts/roboto-mono-latin-500-normal.ttf) format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap
+}
+
+@font-face {
+  font-family: Roboto Mono;
+  src: url(./assets/fonts/roboto-mono-latin-600-normal.ttf) format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap
+}
+
+@font-face {
+  font-family: Roboto Mono;
+  src: url(./assets/fonts/roboto-mono-latin-700-normal.ttf) format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(./assets/fonts/Roboto-Light.ttf) format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(./assets/fonts/Roboto-Regular.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(./assets/fonts/Roboto-Bold.ttf) format('truetype');
+  font-weight: 700;
+  font-display: swap
+}
+
+html {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  width: 100vw;
+}
+
+.dark-theme .dialog {
+  background-color: var(--bg);
+}
+
+.dark-theme .gn-button {
+  border-color: transparent;
+}
