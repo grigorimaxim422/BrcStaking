@@ -11,6 +11,8 @@ import telegramIcon from "./assets/images/telegram.svg";
 import searchIcon from "./assets/images/searchIcon.svg";
 import closeIcon from "./assets/images/close.svg";
 import stakingCoinImg from "./assets/images/stakingCoinImage.png";
+import bCoinIcon from "./assets/images/bcoinIcon-t5wl58ob.png";
+
 // import logo from "../../assets/images/logo.svg";
 import { usePopper } from "react-popper";
 
@@ -147,7 +149,7 @@ const TableItem = ({token, type, status} : TableItemProps) =>{
 	return(
 		<ul className="tableRow">
 			<li className="tableRowCell tableRowCell--flex tableRowCell--main uppercase">
-				<img className="tableRowIcon" src={`./public/images/${token}.png`} alt="" />{token}</li>
+				<img className="tableRowIcon" src={`./images/${token}.png`} alt="" />{token}</li>
 			<li className="tableRowCell tableRowCell--main uppercase"><span className="tableRowHead md:hidden">Type</span> {type}</li>
 			<li className="tableRowCell tableRowCell--main"><span className="tableRowHead md:hidden">APY</span> </li>
 			<li className="tableRowCell tableRowCell--main"><span className="tableRowHead md:hidden">Deposited</span> </li>
@@ -394,7 +396,7 @@ function App() {
 													<div className="sidebarCalcInputFlex"><span className="sidebarCalcEnter">0</span>
 													<div className="sidebarCalcCoin cursor-pointer" id="radix-:r23:" aria-haspopup="menu" aria-expanded="false" data-state="closed">
 														<div className="sidebarCalcCoinIcon">
-															<img src="./images/bcoinIcon-t5wl58ob.png" alt="coinIcon" />
+															<img src={bCoinIcon} alt="coinIcon" />
 														</div>
 														<span className="sidebarCalcCoinName">.com</span></div>
 														</div>
