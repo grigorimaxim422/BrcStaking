@@ -400,7 +400,7 @@ aside.sidenav {
   font-size: var(--t-base);
   font-weight: 300;
   letter-spacing: -.032px;
-  color: rgba(var(--cl-w), 1);
+  /* color: rgba(var(--cl-w), 1); */
 }
 .selected {
   color: rgba(var(--cl-o), 1);
