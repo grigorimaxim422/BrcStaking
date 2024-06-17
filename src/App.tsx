@@ -147,7 +147,7 @@ const TableItem = ({token, type, status} : TableItemProps) =>{
 	return(
 		<ul className="tableRow">
 			<li className="tableRowCell tableRowCell--flex tableRowCell--main uppercase">
-				<img className="tableRowIcon" src={`./images/${token}.png`} alt="" />{token}</li>
+				<img className="tableRowIcon" src={`./public/images/${token}.png`} alt="" />{token}</li>
 			<li className="tableRowCell tableRowCell--main uppercase"><span className="tableRowHead md:hidden">Type</span> {type}</li>
 			<li className="tableRowCell tableRowCell--main"><span className="tableRowHead md:hidden">APY</span> </li>
 			<li className="tableRowCell tableRowCell--main"><span className="tableRowHead md:hidden">Deposited</span> </li>
