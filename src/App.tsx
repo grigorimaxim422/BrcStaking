@@ -147,7 +147,7 @@ const TableItem = ({token, type, status} : TableItemProps) =>{
 	return(
 		<ul className="tableRow">
 			<li className="tableRowCell tableRowCell--flex tableRowCell--main uppercase">
-				<img className="tableRowIcon" src={`src/assets/images/${token}.png`} alt="" />{token}</li>
+				<img className="tableRowIcon" src={`./images/${token}.png`} alt="" />{token}</li>
 			<li className="tableRowCell tableRowCell--main uppercase"><span className="tableRowHead md:hidden">Type</span> {type}</li>
 			<li className="tableRowCell tableRowCell--main"><span className="tableRowHead md:hidden">APY</span> </li>
 			<li className="tableRowCell tableRowCell--main"><span className="tableRowHead md:hidden">Deposited</span> </li>
@@ -372,7 +372,7 @@ function App() {
 										<div className="sidebarBox sidebarBox--gaped mb-4">
 											<div className="sidebarBoxHeader">
 												<div className=" flex items-center gap-4 uppercase w-[50px]">
-													<img style={{borderRadius: '50%'}} src={`src/assets/images/${activeItem.token}.png`}/>
+													<img style={{borderRadius: '50%'}} src={`./images/${activeItem.token}.png`}/>
 													{activeItem.token}
 												</div>
 												<div className="sidebarState tableState tableState--green">{activeItem.status}</div>
@@ -394,7 +394,7 @@ function App() {
 													<div className="sidebarCalcInputFlex"><span className="sidebarCalcEnter">0</span>
 													<div className="sidebarCalcCoin cursor-pointer" id="radix-:r23:" aria-haspopup="menu" aria-expanded="false" data-state="closed">
 														<div className="sidebarCalcCoinIcon">
-															<img src="src/assets/images/bcoinIcon-t5wl58ob.png" alt="coinIcon" />
+															<img src="./images/bcoinIcon-t5wl58ob.png" alt="coinIcon" />
 														</div>
 														<span className="sidebarCalcCoinName">.com</span></div>
 														</div>
@@ -453,7 +453,7 @@ function App() {
 										<div className="sidebarBox sidebarBox--gaped mb-4">
 											<div className="sidebarBoxHeader">
 												<div className=" flex items-center gap-4 uppercase w-[50px]">
-													<img style={{borderRadius: '50%'}} src={`src/assets/images/${activeItem.token}.png`}/>
+													<img style={{borderRadius: '50%'}} src={`./images/${activeItem.token}.png`}/>
 													{activeItem.token}
 												</div>
 												<div className="sidebarState tableState tableState--green">{activeItem.status}</div>
@@ -475,7 +475,7 @@ function App() {
 													<div className="sidebarCalcInputFlex"><span className="sidebarCalcEnter">0</span>
 													<div className="sidebarCalcCoin" id="radix-:r23:" aria-haspopup="menu" aria-expanded="false" data-state="closed">
 														<div className="sidebarCalcCoinIcon">
-															<img style={{borderRadius: '50%'}} src={`src/assets/images/${activeItem.token}.png`}/>
+															<img style={{borderRadius: '50%'}} src={`./images/${activeItem.token}.png`}/>
 														</div>
 														<span className="sidebarCalcCoinName uppercase">{activeItem.token}</span></div>
 														</div>
