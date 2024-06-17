@@ -45,7 +45,7 @@ nav .main-nav {
   /* display: flex; */
   align-items: center;
   position: relative;
-  /* z-index: 100; */
+  z-index: 100;
   font-size: 14px;
   top: clamp(1.5rem, 3.375vw, 54px);
 }
