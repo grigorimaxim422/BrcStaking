@@ -504,7 +504,7 @@ function App() {
 										<div className="sidebarGrid">
 											<div className="sidebarGridItem sidebarBox">
 												<div className="sidebarGridItemLabel">Earn</div>
-												<div className="sidebarGridItemContent">{activeItem.token}</div>
+												<div className="sidebarGridItemContent uppercase">{activeItem.token}</div>
 											</div>
 											<div className="sidebarGridItem sidebarBox">
 												<div className="sidebarGridItemLabel">Type</div>
