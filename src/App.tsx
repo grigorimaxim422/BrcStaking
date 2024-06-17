@@ -8,8 +8,8 @@ import WalletListModal from './components/modal/walletlistModal';
 import OnAuthHandler, { LoadingState } from './components/WalletProvider';
 import twitterIcon from "./assets/images/twitter.svg";
 import telegramIcon from "./assets/images/telegram.svg";
-import searchIcon from "./assets/images/searchIcon.png";
-import closeIcon from "./assets/images/close.png";
+// import searchIcon from "./assets/images/searchIcon.png";
+// import closeIcon from "./assets/images/close.png";
 import stakingCoinImg from "./assets/images/stakingCoinImage.png";
 import bCoinIcon from "./assets/images/bcoinIcon-t5wl58ob.png";
 
@@ -321,7 +321,8 @@ function App() {
 								</div>
 								<div className=" poolsSearch relative">
 									<div className="icon-wrapper absolute top-1/2 left-4 translate-y-[-50%]">
-										<img src={searchIcon}></img>
+										<svg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'><g clip-path='url(#clip0_199_195)'><circle cx='8.625' cy='8.625' r='7.125' stroke='#959595' stroke-width='1.5'/><path d='M13.875 13.875L16.5 16.5' stroke='#959595' stroke-width='1.5' stroke-linecap='round'/></g><defs><clipPath id='clip0_199_195'><rect width='18' height='18' fill='white'/></clipPath></defs></svg>
+										{/* <img src={searchIcon}></img> */}
 									</div>
 									<input className="searchBarInput" placeholder="Token, pool ID" onChange={(e) => {e.target.value? setShowActive(true): setShowActive(false)}}/>
 								</div>
@@ -366,7 +367,8 @@ function App() {
 										<div className={`sidebarPanelItem ${activeTab == true ? 'sidebarPanelItem--active' : ''}`} onClick={() => setActiveTab(true)} >Earnings</div>
 									</div>
 									<button className="sidebarClose" onClick={() => {setShowSidebar(false); setInfoShow(false); setActiveTab(false)}}>
-										<img className="" src={closeIcon} />
+										<svg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M12.4969 11L16.6868 6.81011C16.8856 6.61161 16.9975 6.34224 16.9977 6.06127C16.998 5.7803 16.8866 5.51074 16.6881 5.31189C16.4896 5.11304 16.2202 5.00118 15.9393 5.00094C15.6583 5.00069 15.3887 5.11206 15.1899 5.31057L11 9.50046L6.81011 5.31057C6.61125 5.11171 6.34155 5 6.06034 5C5.77912 5 5.50942 5.11171 5.31057 5.31057C5.11171 5.50942 5 5.77912 5 6.06034C5 6.34155 5.11171 6.61125 5.31057 6.81011L9.50046 11L5.31057 15.1899C5.11171 15.3887 5 15.6584 5 15.9397C5 16.2209 5.11171 16.4906 5.31057 16.6894C5.50942 16.8883 5.77912 17 6.06034 17C6.34155 17 6.61125 16.8883 6.81011 16.6894L11 12.4995L15.1899 16.6894C15.3887 16.8883 15.6584 17 15.9397 17C16.2209 17 16.4906 16.8883 16.6894 16.6894C16.8883 16.4906 17 16.2209 17 15.9397C17 15.6584 16.8883 15.3887 16.6894 15.1899L12.4969 11Z' fill='black'/></svg>
+										{/* <img className="" src={closeIcon} /> */}
 									</button>
 								</div>
 								<div className="sidebarTabs relative">
