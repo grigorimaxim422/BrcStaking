@@ -54,7 +54,7 @@ nav .nav-body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   border-bottom: 1px solid rgba(var(--cl-w), 1);
 }
 
@@ -62,10 +62,10 @@ nav .logo-container {
   flex-shrink: 0;
   position: relative;
   display: flex;
-  height: 64px;
+  /* height: 64px; */
   align-items: center;
   justify-content: flex-start;
-  padding: 16px;
+  /* padding: 16px; */
 }
 
 nav .logo-container img {
@@ -175,6 +175,8 @@ form.search .icon-wrapper.search::after {
   display: flex;
   align-items: end;
   justify-content: end;
+  gap: 8px;
+  margin-top: 5px;
   /* padding-right: 28px; */
 }
 .nav-links a:hover{

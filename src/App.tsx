@@ -76,7 +76,7 @@ const tableItems = [
 		info:'Unigraph are building a decentralised indexer for Bitcoin token standards together with a data availability network to bring additional capabilities to DeFi on Bitcoin'
 	},
 	{
-		token: "drk",
+		token: "ornj",
 		type: "LAUNCHPAD",
 		status:'Claim',
 		site:'OrangeCrypto',
@@ -261,14 +261,14 @@ function App() {
 
 			</div> */}
 
+			<Navbar
+			isConnected={walletInfo.isConnected}
+			accountAddress={walletInfo.address}
+			onClickConnectButton={() => setIsShowWalletList(true)}
+			OnWalletDisconnect={OnWalletDisconnect}
+			/>
 			<main className=" wrapper dark-theme">
 
-				<Navbar
-				isConnected={walletInfo.isConnected}
-				accountAddress={walletInfo.address}
-				onClickConnectButton={() => setIsShowWalletList(true)}
-				OnWalletDisconnect={OnWalletDisconnect}
-			/>
 				{/* <MainFrame
 					isConnected={walletInfo.isConnected}
 					OnClickConnectButton={() => setIsShowWalletList(true)}
@@ -280,8 +280,8 @@ function App() {
 					<div className=" b-container">
 						<div className="stakingBody">
 							<div className="stakingContent">
-								<div className=" flex flex-col gap-4 mb-10">
-									<div className=" mb-3">
+								<div className=" flex flex-col gap-4 mb-[49px]">
+									<div className=" mb-4">
 										<h1 className="stakingHeading">
 											<span className=" hidden md:block"> .Com </span>
 											<span className=" md:hidden"> Staking </span>
@@ -293,8 +293,8 @@ function App() {
 										Stake your .COM to participate <br /> in BRC20 initial farming offerings and ordinal <br /> raffles.
 									</p>
 								</div>
-								<div className=" flex flex-col justify-between gap-8 md:flex-row md:items-center">
-									<a onClick={() => scrollToSection('pools')} className="items-center flex justify-center min-h-[63px] min-w-[292px] overflow-hidden relative text-center bg-[rgb(255,128,0)] text-white cursor-pointer box-border text-[13.3333px] font-normal rounded-[10px]" >
+								<div className=" flex flex-col justify-between gap-10 md:flex-row md:items-center">
+									<a href="#pools" onClick={() => scrollToSection('pools')} className=" items-center flex justify-center min-h-[63px] min-w-[292px] overflow-hidden relative text-center bg-[rgb(255,128,0)] text-white cursor-pointer box-border text-[13.3333px] font-normal rounded-[10px]" >
 										<span className="text-black text-[16px] font-medium tracking-[0.003px] box-border text-center cursor-pointer bg-[rgb(255,128,0)]">
 										[ Stake now ]
 										</span>
@@ -303,7 +303,7 @@ function App() {
 										[ How It Works ]
 									</button>
 								</div>
-								<div className=" flex gap-4 mt-9">
+								<div className=" flex gap-6 mt-[34px]">
 									<a href="https://twitter.com/BRC20com">
 										<svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' ><path d='M18.2048 2.25H21.5128L14.2858 10.51L22.7878 21.75H16.1298L10.9158 14.933L4.94984 21.75H1.63984L9.36984 12.915L1.21484 2.25H8.03984L12.7528 8.481L18.2028 2.25H18.2048ZM17.0438 19.77H18.8768L7.04484 4.126H5.07784L17.0438 19.77Z' fill='white' /></svg>
 									</a>
@@ -322,13 +322,13 @@ function App() {
 
 				<section className="pools" id="pools">
 					<div className=" b-container">
-						<div className=" flex flex-col gap-4">
+						<div className=" flex flex-col gap-8">
 							<div className="poolsHeader">
 								<h2 className="poolsHeaderTitle"> All Pools</h2>
 								<div className="poolsCheckbox">
 									<input type="checkbox" className="checkbox" onChange={(e) =>setShowActive(e.target.checked)} />
 									<label className="poolsCheckboxLabel">
-										Show Only Active
+										Show only Active
 									</label>
 								</div>
 								<div className=" poolsSearch relative">

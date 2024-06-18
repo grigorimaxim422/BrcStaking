@@ -340,7 +340,7 @@ flex-col{
   min-height: 100vh;
   position: relative;
   display: flex;
-  padding-top: 80px;
+  padding-top: 90px;
 }
 
 
@@ -377,7 +377,7 @@ flex-col{
   letter-spacing: -2px;
   line-height: 100%;
   font-weight: 700;
-  /* transform: translate(calc(-1* var(--x))); */
+  transform: translate(calc(-1* var(--x)));
 }
 .stakingHeadingHl {
   transform: translate(var(--x));

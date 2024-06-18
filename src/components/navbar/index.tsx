@@ -13,7 +13,7 @@ interface NavItemProps {
 function NavItem(props: NavItemProps) {
   return (
     <a className="nav-item text-decoration-none" href={props.to ?? '#'} target="_blank">
-      <span className="menuItemsRow_code">&lt;/A&gt; </span>{props.text}
+      <span className="">&lt;/A&gt; </span>{props.text}
       {/* <span className="text">{props.text}</span> */}
     </a>
   );
@@ -375,7 +375,7 @@ export default function Navbar({}: NavbarProps) {
               <NavItem text="Dashboard" to="https://dashboard.brc20.com/" />
               <NavItem text="Wiki" to="https://brc20.com/wiki" />
               <a className="nav-item text-decoration-none selected" >
-                <span className="menuItemsRow_code">&lt;/A&gt; </span>Staking
+                <span className="">&lt;/A&gt; </span>Staking
               </a>
             </div>
             {/* <div
