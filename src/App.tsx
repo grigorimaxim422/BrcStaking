@@ -294,7 +294,7 @@ function App() {
 									</p>
 								</div>
 								<div className=" flex flex-col justify-between gap-10 md:flex-row md:items-center">
-									<a href="#pools" onClick={() => scrollToSection('pools')} className=" items-center flex justify-center min-h-[63px] min-w-[292px] overflow-hidden relative text-center bg-[rgb(255,128,0)] text-white cursor-pointer box-border text-[13.3333px] font-normal rounded-[10px]" >
+									<a href="#pools" onClick={() => scrollToSection('pools')} className=" stake-now items-center flex justify-center min-h-[63px] min-w-[292px] overflow-hidden relative text-center bg-[rgb(255,128,0)] text-white cursor-pointer box-border text-[13.3333px] font-normal rounded-[10px]" >
 										<span className="text-black text-[16px] font-medium tracking-[0.003px] box-border text-center cursor-pointer bg-[rgb(255,128,0)]">
 										[ Stake now ]
 										</span>
@@ -524,11 +524,11 @@ function App() {
 											</div>
 											<div className="sidebarGridItem sidebarBox">
 												<div className="sidebarGridItemLabel">Distribution amount</div>
-												<div className="sidebarGridItemContent">{activeItem.dist_amount}</div>
+												<div className="sidebarGridItemContent uppercase">{activeItem.dist_amount} {activeItem.token}</div>
 											</div>
 											<div className="sidebarGridItem sidebarBox">
 												<div className="sidebarGridItemLabel">TVL</div>
-												<div className="sidebarGridItemContent">{activeItem.tvl}</div>
+												<div className="sidebarGridItemContent">${activeItem.tvl}</div>
 											</div>
 										</div>
 										<div className="sidebarAccs" onClick={() => setInfoShow((show) => !show)}>

@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import logo from "../../assets/images/logo.svg";
-// import { usePopper } from "react-popper";
+import { usePopper } from "react-popper";
 import "./navbar.css";
 import "./responsive.css";
 // import axios from "axios";
@@ -205,57 +205,57 @@ function MenuItem(props: NavItemProps) {
 //   );
 // }
 
-// interface AddressPopoverProps {
-//   address: string;
-//   disconnectWallet: () => void;
-// }
+interface AddressPopoverProps {
+  address: string;
+  disconnectWallet: () => void;
+}
 
-// function AddressPopover({ address, disconnectWallet }: AddressPopoverProps) {
-//   const [visible, setVisible] = useState(false);
-//   const referenceElement = useRef(null);
-//   const popperElement = useRef(null);
-//   const { styles, attributes } = usePopper(
-//     referenceElement.current,
-//     popperElement.current
-//   );
+function AddressPopover({ address, disconnectWallet }: AddressPopoverProps) {
+  const [visible, setVisible] = useState(false);
+  const referenceElement = useRef(null);
+  const popperElement = useRef(null);
+  const { styles, attributes } = usePopper(
+    referenceElement.current,
+    popperElement.current
+  );
 
-//   return (
-//     <>
-//       <button
-//         className="address-btn"
-//         ref={referenceElement}
-//         onClick={() => setVisible(!visible)}
-//         onBlur={() => setVisible(false)}
-//       >
-//         <div className="wrapper">
-//           <span>{address.slice(0, 4) + "..." + address.slice(-4)}</span>
-//           <i
-//             className="addr-arrow-icon iconfont icon-chevron-down"
-//             style={{
-//               transform: visible ? "rotate(180deg)" : "rotateY(0)",
-//             }}
-//           ></i>
-//         </div>
-//       </button>
-//       <div
-//         className={`address-popover popover ${visible ? "is-visible" : "hidden"}`}
-//         style={styles.popper}
-//         ref={popperElement}
-//         {...attributes.popper}
-//       >
-//         <div className="popover-content">
-//           <div className="addr-menu-list">
-//             <div className="addr-menu-item">Orders</div>
-//             <div className="addr-menu-item">Sign In on Mobile</div>
-//             <button className="addr-menu-item" onClick={disconnectWallet}>
-//               Disconnect
-//             </button>
-//           </div>
-//         </div>
-//       </div>
-//     </>
-//   );
-// }
+  return (
+    <>
+      <button
+        className="address-btn"
+        ref={referenceElement}
+        onClick={() => setVisible(!visible)}
+        onBlur={() => setVisible(false)}
+      >
+        <div className="wrapper">
+          <span>{address.slice(0, 4) + "..." + address.slice(-4)}</span>
+          <i
+            className="addr-arrow-icon iconfont icon-chevron-down"
+            style={{
+              transform: visible ? "rotate(180deg)" : "rotateY(0)",
+            }}
+          ></i>
+        </div>
+      </button>
+      <div
+        className={`address-popover popover ${visible ? "is-visible" : "hidden"}`}
+        style={styles.popper}
+        ref={popperElement}
+        {...attributes.popper}
+      >
+        <div className="popover-content">
+          <div className="addr-menu-list">
+            <div className="addr-menu-item">Orders</div>
+            <div className="addr-menu-item">Sign In on Mobile</div>
+            <button className="addr-menu-item" onClick={disconnectWallet}>
+              Disconnect
+            </button>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
 
 // interface SwitchButtonProps {
 //   className?: string;
@@ -344,7 +344,10 @@ interface NavbarProps {
   OnWalletDisconnect: () => void;
 }
 
-export default function Navbar({}: NavbarProps) {
+export default function Navbar({isConnected,
+  accountAddress,
+  onClickConnectButton,
+  OnWalletDisconnect,}: NavbarProps) {
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
@@ -410,22 +413,29 @@ export default function Navbar({}: NavbarProps) {
             </div> */}
 
             <div className="nav-end">
-              {/* {isConnected ? (
-                <div className="address-dropdown">
-                  <AddressPopover
-                    address={accountAddress}
-                    disconnectWallet={OnWalletDisconnect}
-                  />
-                </div>
-              ) : (
-                <button
-                  className="connect-wallet gn-button gn-button--medium gn-button--primary"
-                  onClick={onClickConnectButton}
-                >
-                  <i className="iconfont icon-wallet"></i>
-                  &nbsp;Connect
-                </button>
-              )} */}
+              <div className="walletConnectWrapper">
+                {isConnected ? (
+                  <div className="address-dropdown">
+                    <AddressPopover
+                      address={accountAddress}
+                      disconnectWallet={OnWalletDisconnect}
+                    />
+                  </div>
+                ) : (
+                    <button onClick={onClickConnectButton} type="button" className="items-center flex justify-center min-h-[50px] min-w-[192px] overflow-hidden relative text-center bg-[rgb(255,128,0)] text-black cursor-pointer box-border visible text-[13.3333px] font-medium rounded-[10px] " >
+                      <span className="buttonText">
+                        [ Connect wallet ]
+                      </span>
+                    </button>
+                  // <button
+                  //   className="connect-wallet gn-button gn-button--medium gn-button--primary"
+                  //   onClick={onClickConnectButton}
+                  // >
+                  //   <i className="iconfont icon-wallet"></i>
+                  //   &nbsp;Connect
+                  // </button>
+                )}
+              </div>
 
               <button className="small-menu" onClick={() => setOpenMenu(!openMenu)}>
                 Menu

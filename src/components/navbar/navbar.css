@@ -45,7 +45,7 @@ nav .main-nav {
   /* display: flex; */
   align-items: center;
   position: relative;
-  z-index: 100;
+  z-index: 5;
   font-size: 14px;
   top: clamp(1.5rem, 3.375vw, 54px);
 }
@@ -74,15 +74,26 @@ nav .logo-container img {
 }
 
 @media (max-width: 840px) {
+  .walletConnectWrapper{
+    display: none;
+  }
+  .stake-now{
+    width: 50%;
+    margin: 0 auto;
+  }
+  .logo-container{
+    max-width: 122px;
+    width: 100%;
+  }
   .logo-container img {
       width: 100%;
       height: 28px;
   }
   nav .nav-body {
-    padding-bottom: 0px;
+    padding-bottom: 15px;
   }
   nav .main-nav {  
-    top: .5rem;
+    top: 1.5rem;
   }
   
 }
@@ -173,11 +184,11 @@ form.search .icon-wrapper.search::after {
 .nav-links {
   flex: 1;
   display: flex;
-  align-items: end;
-  justify-content: end;
+  align-items: center;
+  padding-right: 28px;
+  justify-content: center;
   gap: 8px;
   margin-top: 5px;
-  /* padding-right: 28px; */
 }
 .nav-links a:hover{
   color: rgba(var(--cl-o), 1);
@@ -308,7 +319,7 @@ form.search .icon-wrapper.close:hover {
 }
 
 .small-menu {
-  margin-right: 16px;
+  /* margin-right: 16px; */
   cursor: pointer;
   align-items: center;
   display: none;
